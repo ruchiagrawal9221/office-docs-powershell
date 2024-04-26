@@ -17,8 +17,7 @@ You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting
 
 ## SYNTAX
 ```
-Get-CsMeetingMigrationStatus [[-Identity] <UserIdParameter>] [-Confirm] [-EndTime <DateTime>] [-StartTime <DateTime>]
- [-SummaryOnly] [-Tenant <Guid>] [-WhatIf] [-State <StateType>] [<CommonParameters>]
+Get-CsMeetingMigrationStatus [[-Identity] <UserIdParameter>] [-EndTime <DateTime>] [-StartTime <DateTime>] [-SummaryOnly] [-State <StateType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,22 +55,6 @@ applicable: Microsoft Teams
 
 Required: False
 Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-The Confirm switch causes the command to pause processing and requires confirmation to proceed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -116,46 +99,6 @@ Specified that you want a summary status of MMS migrations returned.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 applicable: Microsoft Teams
 
 Required: False
